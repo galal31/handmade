@@ -1,0 +1,239 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #fef4d0; /* لون خلفية أصفر فاتح */
+    color: #5c3317; /* لون نص بني */
+    direction: rtl;
+    line-height: 1.6;
+  }
+  
+  /* شريط التنقل */
+  #navbar {
+    width: 100%;
+    background: #9b5e3a; /* لون بني متوسط */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* العناصر في منتصف الـ Nav */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  #navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* مسافات بين العناصر */
+  }
+  
+  #navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 15px; /* تحسين مساحة العنصر */
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #navbar ul li a:hover {
+    background-color: #fff;
+    color: #9b5e3a;
+    transform: scale(1.1); /* تكبير العنصر عند التمرير */
+  }
+  
+  /* التصميم الرئيسي */
+  #dashboard {
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .section {
+    background-color: #fff;
+    border: 1px solid #9b5e3a;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل للأقسام */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-5px); /* حركة خفيفة للأعلى عند التمرير */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* زيادة الظل */
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #9b5e3a;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #9b5e3a;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  table th:hover {
+    background-color: #5c3317;
+  }
+  
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  table tr:hover {
+    background-color: #fff3cd; /* تغيير لون الصف عند التمرير */
+  }
+  
+  /* تخصيص الأزرار */
+  .action-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #9b5e3a; /* لون بني */
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: #5c3317; /* بني داكن */
+    transform: scale(1.05); /* تكبير الزر قليلاً */
+  }
+  
+  /* نافذة تأكيد الحذف */
+  .confirmation-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .modal-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #9b5e3a; /* لون بني */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .modal-content button:hover {
+    background-color: #5c3317;
+  }
+  
+  .add-balance-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .add-balance-form input[type="number"] {
+    padding: 10px;
+    border: 1px solid #9b5e3a;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .add-balance-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9b5e3a;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .add-balance-form button:hover {
+    background-color: #5c3317;
+    transform: scale(1.05);
+  }
+  
+  
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    body {
+      padding: 0 10px;
+    }
+  
+    #navbar ul {
+      flex-direction: column; 
+      gap: 10px;
+    }
+  
+    table th, table td {
+      font-size: 14px;
+      padding: 5px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #dashboard {
+      padding: 10px;
+    }
+  
+    .section {
+      padding: 15px;
+    }
+  
+    table th, table td {
+      font-size: 12px;
+    }
+  
+    button {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  }
+  
